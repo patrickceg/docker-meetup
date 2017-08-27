@@ -2,8 +2,9 @@
 
 # Docker - Starting at Small Scale
 
-## Patrick Santos @patrickceg
-### Larus Technologies
+Patrick Santos @patrickceg
+
+Larus Technologies
 
 ---
 
