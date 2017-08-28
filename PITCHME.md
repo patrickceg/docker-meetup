@@ -34,7 +34,9 @@ Larus Technologies
 * Keep using your VMs: Docker works with them
 * More space efficient than VMs:
   * 30% less disk, 7% less RAM, 25% less CPU [1]
-* Large selection of images to experiment with or use
+* Large selection of images
+  * https://hub.docker.com/
+  * https://store.docker.com/
 
 ---
 
@@ -56,12 +58,36 @@ Larus Technologies
 
 # Demos
 
++++
+
+Start a Docker container with Ubuntu:
+
+```sudo docker run -it ubuntu:16.04 /bin/bash```
+
+From inside the container, see what's inside:
+
+```ls```
+
++++
+
+Now let's check the disk space by the container
+
+```sudo docker system df```
+
+(Less than 200 MB, compared to 1.2 GB for a Ubuntu 16.04 VM installed from Mini ISO)
+
+...and the RAM used by a container
+
+```sudo docker stats```
+
+... hundreds of KB vs usually hundreds of MB for a VM
+
 ---
 
 References
 
-[1] Mike Coleman. 2017. Docker?!? But I'm a SYSADMIN! Retrieved Aug. 11, 2017, from https://youtu.be/M7ZBF-JJWVU
-[2] Docker. 2017. Running your first container. Retrieved Aug. 16, 2017, from https://github.com/docker/labs/blob/master/beginner/chapters/alpine.md[3] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres 
+```[1] Mike Coleman. 2017. Docker?!? But I'm a SYSADMIN! Retrieved Aug. 11, 2017, from https://youtu.be/M7ZBF-JJWVU
+[2] Docker. 2017. Running your first container. Retrieved Aug. 16, 2017, from https://github.com/docker/labs/blob/master/beginner/chapters/alpine.md[3] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres```
 
 ---
 
