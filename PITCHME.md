@@ -155,6 +155,37 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 
 ---
 
+### From the Trenches: Networking Containers with Host Name
+
+* Disclaimer: You're _supposed_ to use _Docker Compose_ or _Overlay Network_ for multiple nodes
+
+[image here]
+
++++
+
+```
+sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d postgres:9.6
+sudo docker run -it --rm postgres:9.6 psql --host=neon --user=postgres --port=40000
+```
+* Where my host name is "neon" - got error:
+```
+psql: could not connect to server: No route to host
+```
+* Issue: Firewall is blocking it!
+```
+sudo firewall-cmd --add-port 40000/tcp
+```
+
+---
+
+### Lessons Learned / Future Work
+
+* Docker doesn't replace VMs, but has its uses
+* Made testing run more smoothly
+* Next up: Hooking many services together
+
+---
+
 References
 
 ```
