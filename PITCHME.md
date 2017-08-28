@@ -62,32 +62,42 @@ Larus Technologies
 
 Start a Docker container with Ubuntu:
 
-```sudo docker run -it ubuntu:16.04 /bin/bash```
+```
+sudo docker run -it ubuntu:16.04 /bin/bash
+```
 
 From inside the container, see what's inside:
 
-```ls```
+```
+ls
+```
 
 +++
 
 Now let's check the disk space by the container
 
-```sudo docker system df```
+```
+sudo docker system df
+```
 
 (Less than 200 MB, compared to 1.2 GB for a Ubuntu 16.04 VM installed from Mini ISO)
 
 ...and the RAM used by a container
 
-```sudo docker stats```
+```
+sudo docker stats
+```
 
-... hundreds of KB vs usually hundreds of MB for a VM
+hundreds of KB vs usually hundreds of MB for a VM
 
 ---
 
 References
 
-```[1] Mike Coleman. 2017. Docker?!? But I'm a SYSADMIN! Retrieved Aug. 11, 2017, from https://youtu.be/M7ZBF-JJWVU
-[2] Docker. 2017. Running your first container. Retrieved Aug. 16, 2017, from https://github.com/docker/labs/blob/master/beginner/chapters/alpine.md[3] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres```
+```
+[1] Mike Coleman. 2017. Docker?!? But I'm a SYSADMIN! Retrieved Aug. 11, 2017, from https://youtu.be/M7ZBF-JJWVU
+[2] Docker. 2017. Running your first container. Retrieved Aug. 16, 2017, from https://github.com/docker/labs/blob/master/beginner/chapters/alpine.md[3] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres
+```
 
 ---
 
