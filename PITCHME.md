@@ -18,6 +18,15 @@ Larus Technologies
 
 ---
 
+### What is Docker
+
+Containers using Kernel Virtualization
+
+![Containers working with VMs Image](https://www.docker.com/sites/default/files/containers-vms-together.png)
+> Containers are a way to package software in a format that can run isolated on a shared operating system. Unlike VMs, containers do not bundle a full operating system - only libraries and settings required to make the software work are needed. [1]
+
+---
+
 ### My use case
 
 * Servers on-site, some small (< 3) cloud machines
@@ -33,7 +42,7 @@ Larus Technologies
 
 * Keep using your VMs: Docker works with them
 * More space efficient than VMs:
-  * 30% less disk, 7% less RAM, 25% less CPU [1]
+  * 30% less disk, 7% less RAM, 25% less CPU [2]
 * Large selection of images
   * https://hub.docker.com/
   * https://store.docker.com/
@@ -96,12 +105,12 @@ sudo docker stats
 
 # Demo: PostgreSQL Database Container
 
-See [3]: https://hub.docker.com/_/postgres/
+See [4]: https://hub.docker.com/_/postgres/
 * If using Docker for Windows or something else that doesn't have sudo, omit the _sudo_ calls from samples
 
 +++
 
-### From the instructions [3]:
+### From the instructions [4]:
 
 * Docker images have detailed instructions on their Docker Hub or Github pages
 
@@ -121,7 +130,7 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 ```
 * *-p 40000:5432*: Exposed the port for other machines to access the database with the machine's port 40000
 * *postgres:9.6*: Select a version to use (or else you always get the latest)
-* Most popular password in recent article :)  [4] 
+* Most popular password in recent article :)  [5] 
 
 +++
 
@@ -190,10 +199,11 @@ sudo firewall-cmd --add-port 40000/tcp
 References
 
 ```
-[1] Mike Coleman. 2017. Docker?!? But I'm a SYSADMIN! Retrieved Aug. 11, 2017, from https://youtu.be/M7ZBF-JJWVU
-[2] Docker. 2017. Running your first container. Retrieved Aug. 16, 2017, from https://github.com/docker/labs/blob/master/beginner/chapters/alpine.md
-[3] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres
-[4] Dan Goodin. Leak of >1,7000 valid passwords could make the IoT mess much worse. Retrieved Aug. 27, from https://arstechnica.com/information-technology/2017/08/leak-of-1700-valid-passwords-could-make-the-iot-mess-much-worse/
+[1] Docker. 2017. What is a Container. Retrieved Aug. 29, 2017. https://www.docker.com/what-container
+[2] Mike Coleman. 2017. Docker?!? But I'm a SYSADMIN! Retrieved Aug. 11, 2017, from https://youtu.be/M7ZBF-JJWVU
+[3] Docker. 2017. Running your first container. Retrieved Aug. 16, 2017, from https://github.com/docker/labs/blob/master/beginner/chapters/alpine.md
+[4] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres
+[5] Dan Goodin. Leak of >1,7000 valid passwords could make the IoT mess much worse. Retrieved Aug. 27, from https://arstechnica.com/information-technology/2017/08/leak-of-1700-valid-passwords-could-make-the-iot-mess-much-worse/
 ```
 
 ---
