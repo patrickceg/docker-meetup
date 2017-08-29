@@ -152,6 +152,7 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 * To persist the data, you want _volumes_, but test thoroughly! 
   * Writing to the wrong place (not in the volume)
   * Improper file permissions in the volume (hopefully the app crashes instead of pretending to work)
+  * Recreated container but data was clobbered
 
 ---
 
