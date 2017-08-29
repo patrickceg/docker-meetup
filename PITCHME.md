@@ -20,9 +20,8 @@ Larus Technologies
 
 ### What is Docker
 
-Containers using Kernel Virtualization
-
 ![Containers working with VMs Image](https://www.docker.com/sites/default/files/containers-vms-together.png)
+
 > Containers are a way to package software in a format that can run isolated on a shared operating system. Unlike VMs, containers do not bundle a full operating system - only libraries and settings required to make the software work are needed. [1]
 
 ---
