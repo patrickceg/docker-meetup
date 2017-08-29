@@ -12,7 +12,7 @@ Larus Technologies
 
 * My Use Case
 * Why get started with Docker
-  * And already use Virtual Machines (VMs)
+  * When already using/considering Virtual Machines (VMs)
 * How I started
 * Demos
 
@@ -35,13 +35,13 @@ Larus Technologies
 * Servers on-site, some small (< 3) cloud machines
 
 * Not a cluster, but Docker still helps:
-  * More efficient for disk / RAM than VMs
+  * More efficient than 1 VM per service
   * Quick setup / teardown (great for demos)
   * "Works on my machine" solution
 
 ---
 
-### :heart: VMs, so why Docker?
+### I have VMs, so why Docker?
 
 * Keep using your VMs: Docker works with them
 * More space efficient than VMs:
@@ -76,7 +76,7 @@ Larus Technologies
 
 # Demo: Basic Linux Container
 
-(Note: vertical slide - press / scroll down)
+* Omit the _sudo_ calls from samples if running Docker for Windows or don't otherwise use sudo
 
 +++
 
@@ -115,13 +115,12 @@ sudo docker stats
 # Demo: PostgreSQL Database Container
 
 See [4]: https://hub.docker.com/_/postgres/
-* If using Docker for Windows or something else that doesn't have sudo, omit the _sudo_ calls from samples
 
 +++
 
 ### From the instructions [4]:
 
-* Docker images have detailed instructions on their Docker Hub or Github pages
+* Docker images have detailed instructions on Docker Hub or Github
 
 > How to use this image
 > start a postgres instance
@@ -132,7 +131,7 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgre
 
 +++
 
-* From that example, let's spin up our own container:
+* Modifying the examples to spin a container...
 
 ```
 sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d postgres:9.6
@@ -149,7 +148,7 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 nmap -p 40000 localhost
 ```
 
-* If container is inaccessible, check firewall rules, especially FORWARD
+* If container is inaccessible, check firewall
 * We can also check the Docker container itself:
 
 ```
@@ -177,6 +176,7 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 ### How it worked / future work
 
 * All smoke test / release test software runs on Docker containers
+  * Containers run in VMs
   * Easier to set up or reconfigure nodes
 * Helps a lot in testing
   * Test "crashing" a service? No problem!
