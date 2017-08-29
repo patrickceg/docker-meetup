@@ -41,7 +41,7 @@ Larus Technologies
 
 ---
 
-### I have VMs, so why Docker?
+### :heart: VMs, so why Docker?
 
 * Keep using your VMs: Docker works with them
 * More space efficient than VMs:
@@ -174,11 +174,13 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 
 ---
 
-### Lessons Learned / Future Work
+### How it worked / future work
 
-* Docker doesn't replace VMs, but has its uses
-* Made testing run more smoothly
-* Next up: Hooking many services together
+* All smoke test / release test software runs on Docker containers
+  * Easier to set up or reconfigure nodes
+* Helps a lot in testing
+  * Test "crashing" a service? No problem!
+* Starting to get into clusters
 
 ---
 
