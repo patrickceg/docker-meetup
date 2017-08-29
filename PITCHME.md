@@ -22,6 +22,10 @@ Larus Technologies
 
 ![Containers working with VMs Image](https://www.docker.com/sites/default/files/containers-vms-together.png)
 
+> <sub>[1]</sub>
+
++++
+
 > Containers are a way to package software in a format that can run isolated on a shared operating system. Unlike VMs, containers do not bundle a full operating system - only libraries and settings required to make the software work are needed. [1]
 
 ---
