@@ -4,7 +4,7 @@
 
 Patrick Santos @patrickceg
 
-Larus Technologies
+<span class="weak">Larus Technologies</span>
 
 ---
 

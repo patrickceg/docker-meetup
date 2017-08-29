@@ -1,3 +1,4 @@
 theme : white
+theme-override : assets/css/PITCHME.css
 footnote: Docker Meetup
 slide-number: true
