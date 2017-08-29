@@ -20,9 +20,9 @@ Larus Technologies
 
 ### My use case
 
-* Heterogeneous servers, some small (< 3) cloud machines
+* Servers on-site, some small (< 3) cloud machines
 
-* Docker still helps:
+* Not a cluster, but Docker still helps:
   * More efficient for disk / RAM than VMs
   * Quick setup / teardown (great for demos)
   * "Works on my machine" solution
