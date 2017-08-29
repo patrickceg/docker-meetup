@@ -12,7 +12,6 @@ Larus Technologies
 
 * My Use Case
 * Why get started with Docker
-  * When already using/considering Virtual Machines (VMs)
 * How I started
 * Demos
 
@@ -76,7 +75,7 @@ Larus Technologies
 
 # Demo: Basic Linux Container
 
-* Omit the _sudo_ calls from samples if running Docker for Windows or don't otherwise use sudo
+* Omit the _sudo_ calls from samples if running Docker for Windows or don't otherwise have sudo
 
 +++
 
@@ -184,6 +183,10 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
 
 ---
 
+END
+
+---
+
 References
 
 ```
@@ -193,7 +196,3 @@ References
 [4] Docker. 2017. postgres. Retrieved Aug. 16, 2017, from https://store.docker.com/images/postgres
 [5] Dan Goodin. Leak of >1,7000 valid passwords could make the IoT mess much worse. Retrieved Aug. 27, from https://arstechnica.com/information-technology/2017/08/leak-of-1700-valid-passwords-could-make-the-iot-mess-much-worse/
 ```
-
----
-
-END
