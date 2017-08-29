@@ -2,9 +2,9 @@
 
 # Docker - Starting at Small Scale
 
-Patrick Santos @patrickceg
+### Patrick Santos @patrickceg
 
-<span class="weak">Larus Technologies</span>
+Larus Technologies
 
 ---
 
@@ -60,7 +60,13 @@ Patrick Santos @patrickceg
 
 ---
 
-### Finding a ~~victim~~ / candidate
+### Finding a ~~victim~~ / candidate (1)
+
+![Environment Before Docker](assets/images/before_docker.png)
+
++++
+
+### Finding a ~~victim~~ / candidate (2)
 
 * Not in production!
 * Docker image available
@@ -165,29 +171,6 @@ sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d po
   * Writing to the wrong place (not in the volume)
   * Improper file permissions in the volume (hopefully the app crashes instead of pretending to work)
   * Recreated container but data was clobbered
-
----
-
-### From the Trenches: Networking Containers with Host Name
-
-* Disclaimer: You're _supposed_ to use _Docker Compose_ or _Overlay Network_ for multiple nodes
-
-[image here]
-
-+++
-
-```
-sudo docker run --name myunsafedb -p 40000:5432 -e POSTGRES_PASSWORD=admin -d postgres:9.6
-sudo docker run -it --rm postgres:9.6 psql --host=neon --user=postgres --port=40000
-```
-* Where my host name is "neon" - got error:
-```
-psql: could not connect to server: No route to host
-```
-* Issue: Firewall is blocking it!
-```
-sudo firewall-cmd --add-port 40000/tcp
-```
 
 ---
 
